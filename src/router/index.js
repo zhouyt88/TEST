@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import login from '@/login'
+import index2 from '@/login/index2'
 
 Vue.use(Router)
 
@@ -12,12 +13,17 @@ Router.prototype.push = function push (location) {
 
 export default new Router({
     // linkActiveClass:'active',
-    mode: 'history',
+    // mode: 'history',
     routes: [
         {
             path: '*',
             name: 'login',
             component: login
+        },
+        {
+            path: '/index2',
+            name: 'index2',
+            component: index2
         }
     ]
 })

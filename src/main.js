@@ -1,5 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
+import router from './router'
+
 import Cloudbase from "@cloudbase/vue-provider";
 
 window._tcbEnv = window._tcbEnv || {};
@@ -15,5 +17,6 @@ Vue.use(Cloudbase, {
 });
 
 new Vue({
+    router,
   render: h => h(App)
 }).$mount("#app");
